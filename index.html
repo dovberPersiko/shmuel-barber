@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>שמואל | מספרת גברים בגבעת שמואל</title>
-<meta name="description" content="שמואל – מספרת גברים בגבעת שמואל, ז'בוטינסקי 50. תספורת, זקן וילדים. פתוח כל יום 19:00–22:00. קביעת תור בוואטסאפ.">
+<meta name="description" content="שמואל – מספרת גברים בגבעת שמואל, ז'בוטינסקי 50. תספורת, זקן וילדים. פתוח בימים א'–ה' 19:00–22:00. קביעת תור בוואטסאפ.">
 <meta name="theme-color" content="#0F2A22">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="שמואל | מספרת גברים בגבעת שמואל">
-<meta property="og:description" content="תספורת, זקן וילדים. פתוח כל יום 19:00–22:00. קביעת תור בוואטסאפ.">
+<meta property="og:description" content="תספורת, זקן וילדים. פתוח בימים א'–ה' 19:00–22:00. קביעת תור בוואטסאפ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;800&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
   },
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
     "opens": "19:00",
     "closes": "22:00"
   }]
@@ -202,7 +202,7 @@ html.js .reveal.in{opacity:1;transform:none}
 
 <div class="topbar">
   <div class="wrap">
-    <span class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="statusText">פתוח כל יום, <span class="ltr">19:00–22:00</span></span></span>
+    <span class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="statusText">פתוח א'–ה', <span class="ltr">19:00–22:00</span></span></span>
     <span>לקביעת תור: <a class="ltr" href="tel:+972586799674">058-679-9674</a></span>
   </div>
 </div>
@@ -253,7 +253,7 @@ html.js .reveal.in{opacity:1;transform:none}
 <section class="why" aria-label="בקצרה">
   <div class="wrap">
     <div class="why-item reveal" style="--d:0s"><strong>קובעים בוואטסאפ</strong><span>אני עונה ומציע זמן</span></div>
-    <div class="why-item reveal" style="--d:.12s"><strong>פתוח כל ערב</strong><span><span class="ltr">19:00–22:00</span></span></div>
+    <div class="why-item reveal" style="--d:.12s"><strong>פתוח בערבים, א'–ה'</strong><span><span class="ltr">19:00–22:00</span></span></div>
     <div class="why-item reveal" style="--d:.24s"><strong>גם לילדים</strong><span>עד גיל 13</span></div>
   </div>
 </section>
@@ -289,7 +289,7 @@ html.js .reveal.in{opacity:1;transform:none}
         <a class="btn btn-wa" href="https://wa.me/972586799674?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%AA%D7%95%D7%A8%20%D7%9C%D7%AA%D7%A1%D7%A4%D7%95%D7%A8%D7%AA">קביעת תור בוואטסאפ</a>
       </div>
     </div>
-    <div class="info reveal" style="--d:.1s"><span class="label">שעות</span>כל יום, <span class="ltr">19:00–22:00</span></div>
+    <div class="info reveal" style="--d:.1s"><span class="label">שעות</span>ימים א'–ה', <span class="ltr">19:00–22:00</span></div>
     <div class="info reveal" style="--d:.2s"><span class="label">כתובת</span>ז'בוטינסקי 50, גבעת שמואל<br>
       <a class="btn btn-line" href="https://waze.com/ul?q=%D7%96%27%D7%91%D7%95%D7%98%D7%99%D7%A0%D7%A1%D7%A7%D7%99%2050%20%D7%92%D7%91%D7%A2%D7%AA%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C&navigate=yes" rel="noopener" target="_blank">ניווט ב־Waze</a></div>
     <div class="info reveal" style="--d:.3s"><span class="label">טלפון</span><a class="ltr" href="tel:+972586799674">058-679-9674</a></div>
@@ -314,13 +314,20 @@ html.js .reveal.in{opacity:1;transform:none}
   /* open / closed status (Israel time) */
   (function () {
     try {
-      var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Jerusalem', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
-      var h = +parts.find(function (p) { return p.type === 'hour'; }).value;
-      var m = +parts.find(function (p) { return p.type === 'minute'; }).value;
-      var mins = h * 60 + m, el = document.getElementById('status'), tx = document.getElementById('statusText');
-      if (mins >= 19 * 60 && mins < 22 * 60) { tx.textContent = 'פתוח עכשיו · עד 22:00'; }
-      else if (mins < 19 * 60) { el.classList.add('closed'); tx.textContent = 'סגור כרגע · נפתח היום ב־19:00'; }
-      else { el.classList.add('closed'); tx.textContent = 'סגור כרגע · נפתח מחר ב־19:00'; }
+      /* open Sunday–Thursday 19:00–22:00, Israel time */
+      var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Jerusalem', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+      function part(t) { return parts.find(function (p) { return p.type === t; }).value; }
+      var day = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[part('weekday')];
+      var mins = (+part('hour')) * 60 + (+part('minute'));
+      var el = document.getElementById('status'), tx = document.getElementById('statusText');
+      var openDay = day <= 4;
+      if (openDay && mins >= 19 * 60 && mins < 22 * 60) { tx.textContent = 'פתוח עכשיו · עד 22:00'; }
+      else {
+        el.classList.add('closed');
+        if (openDay && mins < 19 * 60) { tx.textContent = 'סגור כרגע · נפתח היום ב־19:00'; }
+        else if (day >= 0 && day <= 3) { tx.textContent = 'סגור כרגע · נפתח מחר ב־19:00'; }
+        else { tx.textContent = 'סגור כרגע · נפתח ביום א׳ ב־19:00'; }
+      }
     } catch (e) {}
   })();
 
