@@ -312,9 +312,6 @@ html.js .reveal.in{opacity:1;transform:none}
   <div class="wrap">
     <div class="contact-head">
       <h2 class="reveal">בואו להסתפר</h2>
-      <div class="big-cta reveal" style="--d:.15s">
-        <a class="btn btn-wa" data-goatcounter-click="whatsapp" href="https://wa.me/972586799674?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%AA%D7%95%D7%A8%20%D7%9C%D7%AA%D7%A1%D7%A4%D7%95%D7%A8%D7%AA">קביעת תור בוואטסאפ</a>
-      </div>
     </div>
     <div class="info reveal" style="--d:.1s"><span class="label">שעות</span><span class="hr"><span>א'–ד'</span><span class="ltr">09:00–16:00</span></span><span class="hr"><span>ה'</span><span>סגור</span></span><span class="hr"><span>ו'</span><span class="ltr">14:30–17:00</span></span><span class="hr"><span>שבת</span><span>סגור</span></span></div>
     <div class="info reveal" style="--d:.2s"><span class="label">כתובת</span>ז'בוטינסקי 50, גבעת שמואל<br>
@@ -383,7 +380,7 @@ html.js .reveal.in{opacity:1;transform:none}
       ctaVisible = Math.max(0, ctaVisible);
       updateFab();
     });
-    document.querySelectorAll('.cta-row .btn, .big-cta .btn').forEach(function (el) { ctaIo.observe(el); });
+    document.querySelectorAll('.cta-row .btn').forEach(function (el) { ctaIo.observe(el); });
   }
 
   /* count-up numbers */
