@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>שמואל | מספרת גברים בגבעת שמואל</title>
-<meta name="description" content="שמואל – מספרת גברים בגבעת שמואל, ז'בוטינסקי 50. תספורת, זקן וילדים. פתוח בימים א'–ה' 19:00–22:00. קביעת תור בוואטסאפ.">
+<title>Shmuel Persiko hair design | מספרת גברים בגבעת שמואל</title>
+<meta name="description" content="Shmuel Persiko hair design – מספרת גברים בגבעת שמואל, ז'בוטינסקי 50. תספורת, זקן וילדים. פתוח א'–ד' 09:00–16:00, ו' 14:30–17:00. קביעת תור בוואטסאפ.">
 <meta name="theme-color" content="#0F2A22">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
-<meta property="og:title" content="שמואל | מספרת גברים בגבעת שמואל">
-<meta property="og:description" content="תספורת, זקן וילדים. פתוח בימים א'–ה' 19:00–22:00. קביעת תור בוואטסאפ.">
+<meta property="og:title" content="Shmuel Persiko hair design | מספרת גברים בגבעת שמואל">
+<meta property="og:description" content="תספורת, זקן וילדים. פתוח א'–ד' 09:00–16:00, ו' 14:30–17:00. קביעת תור בוואטסאפ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;800&display=swap" rel="stylesheet">
@@ -18,7 +18,8 @@
 {
   "@context": "https://schema.org",
   "@type": "BarberShop",
-  "name": "שמואל – מספרת גברים",
+  "name": "Shmuel Persiko hair design",
+  "alternateName": "שמואל פרסיקו – מספרת גברים",
   "telephone": "+972586799674",
   "priceRange": "₪60–₪100",
   "address": {
@@ -27,12 +28,11 @@
     "addressLocality": "גבעת שמואל",
     "addressCountry": "IL"
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
-    "opens": "19:00",
-    "closes": "22:00"
-  }]
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday"], "opens": "09:00", "closes": "16:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "14:30", "closes": "17:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "3" }
 }
 </script>
 <style>
@@ -150,7 +150,7 @@ html.js .row.reveal .leader{transform:scaleX(0);transition:transform .9s var(--e
 html.js .row.reveal.in .leader{transform:scaleX(1)}
 .about-photo{flex:0 0 44%;width:44%;min-width:200px;height:auto;max-height:520px;object-fit:cover;object-position:center 12%;position:relative}
 .about-text{flex:1 1 220px;align-self:center;padding:28px 32px;position:relative}
-.about{flex:1 1 340px;position:relative;align-self:stretch;display:flex;flex-direction:row-reverse;flex-wrap:wrap;align-items:stretch;padding:0;background:var(--green);color:var(--ivory);overflow:hidden}
+.about{flex:1 1 340px;position:relative;align-self:stretch;display:flex;flex-direction:row;flex-wrap:wrap;align-items:stretch;padding:0;background:var(--green);color:var(--ivory);overflow:hidden}
 .about::before{content:"";position:absolute;inset:10px;border:1px solid rgba(201,162,75,.55);pointer-events:none}
 .about h3{margin:0 0 10px;font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:32px;color:var(--brass)}
 .about p{margin:0 0 10px;font-size:20px;line-height:1.65;position:relative}
@@ -162,6 +162,17 @@ html.js .row.reveal.in .leader{transform:scaleX(1)}
 @keyframes bigA{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(-20deg)}}
 @keyframes bigB{0%,100%{transform:rotate(2deg)}50%{transform:rotate(20deg)}}
 
+/* ---------- reviews ---------- */
+.reviews .wrap{padding-top:64px;padding-bottom:20px}
+.rev-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;margin-bottom:24px}
+.rev-head h2{margin:0}
+.rating{color:var(--brass);font-weight:800;font-size:17px;border-bottom:1px solid transparent;transition:border-color .3s}
+.rating:hover{border-color:var(--brass)}
+.rev-grid{display:flex;flex-wrap:wrap;gap:18px}
+.rev{flex:1 1 300px;margin:0;padding:26px 28px;border:1px solid rgba(201,162,75,.45);background:rgba(243,238,226,.04)}
+.rev p{margin:0 0 14px;font-family:'Frank Ruhl Libre',serif;font-size:23px;line-height:1.5}
+.rev cite{font-style:normal;font-weight:800;font-size:16px;color:var(--brass)}
+
 /* ---------- contact ---------- */
 .contact{border-top:2px solid var(--brass)}
 .contact .wrap{display:flex;flex-wrap:wrap;align-items:flex-start;gap:32px 48px;padding-top:56px;padding-bottom:48px}
@@ -169,6 +180,7 @@ html.js .row.reveal.in .leader{transform:scaleX(1)}
 .contact-head h2{margin:0}
 .info{flex:1 1 200px;font-size:20px;line-height:1.55;border-top:1px solid rgba(243,238,226,.22);padding-top:18px}
 .info .label{display:block;font-size:15px;font-weight:800;color:var(--brass);margin-bottom:4px}
+.info .hr{display:flex;justify-content:space-between;gap:16px;max-width:260px}
 .info .btn{min-height:44px;padding:0 20px;font-size:16px;margin-top:10px}
 .big-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
@@ -204,7 +216,7 @@ html.js .reveal.in{opacity:1;transform:none}
 
 <div class="topbar">
   <div class="wrap">
-    <span class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="statusText">פתוח א'–ה', <span class="ltr">19:00–22:00</span></span></span>
+    <span class="status" id="status"><span class="dot" aria-hidden="true"></span><span id="statusText">פתוח א'–ד' <span class="ltr">09:00–16:00</span></span></span>
     <span>לקביעת תור: <a class="ltr" href="tel:+972586799674">058-679-9674</a></span>
   </div>
 </div>
@@ -216,7 +228,7 @@ html.js .reveal.in{opacity:1;transform:none}
         <g class="a"><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/></g>
         <g class="b"><circle cx="6" cy="6" r="3"/><line x1="8.12" y1="8.12" x2="20" y2="20"/></g>
       </svg>
-      <b>שמואל</b>
+      <b class="ltr" style="font-size:25px">Shmuel Persiko</b>
     </a>
     <nav class="menu" aria-label="ניווט ראשי">
       <a class="lnk" href="#prices">מחירון</a>
@@ -231,7 +243,7 @@ html.js .reveal.in{opacity:1;transform:none}
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <div class="eyebrow">שמואל · ברברשופ</div>
+      <div class="eyebrow"><span class="ltr">Shmuel Persiko hair design</span></div>
       <h1>
         <span class="line" style="--i:0"><span>מספרת גברים</span></span>
         <span class="line" style="--i:1"><span class="brass">בגבעת שמואל</span></span>
@@ -255,7 +267,7 @@ html.js .reveal.in{opacity:1;transform:none}
 <section class="why" aria-label="בקצרה">
   <div class="wrap">
     <div class="why-item reveal" style="--d:0s"><strong>קובעים בוואטסאפ</strong><span>אני עונה ומציע זמן</span></div>
-    <div class="why-item reveal" style="--d:.12s"><strong>פתוח בערבים, א'–ה'</strong><span><span class="ltr">19:00–22:00</span></span></div>
+    <div class="why-item reveal" style="--d:.12s"><strong>פתוח א'–ד' ובשישי</strong><span>השעות בסוף הדף</span></div>
     <div class="why-item reveal" style="--d:.24s"><strong>גם לילדים</strong><span>עד גיל 13</span></div>
   </div>
 </section>
@@ -284,7 +296,18 @@ html.js .reveal.in{opacity:1;transform:none}
   </div>
 </section>
 
-<!-- להוסיף כאן בהמשך: ביקורות אמיתיות של לקוחות (שם פרטי ואות) -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-head">
+      <h2 class="reveal">מה אומרים עליי</h2>
+      <a class="rating reveal" style="--d:.1s" href="https://maps.app.goo.gl/AsABTumghhSa5jSE9" target="_blank" rel="noopener">5.0 מתוך 5 · 3 ביקורות בגוגל</a>
+    </div>
+    <div class="rev-grid">
+      <blockquote class="rev reveal" style="--d:.05s"><p>אלוף התספורת. מקצועי, עושה אחלה תספורות.</p><cite>אהרון ז'</cite></blockquote>
+      <blockquote class="rev reveal" style="--d:.18s"><p>שמואל מספר את הבן שלי קבוע. לא מחליפה אותו בשום ספר אחר!!! פשוט מעולה. מומלץ!!!</p><cite>רחלי פ'</cite></blockquote>
+    </div>
+  </div>
+</section>
 
 <section class="contact" id="contact">
   <div class="wrap">
@@ -294,7 +317,7 @@ html.js .reveal.in{opacity:1;transform:none}
         <a class="btn btn-wa" href="https://wa.me/972586799674?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%AA%D7%95%D7%A8%20%D7%9C%D7%AA%D7%A1%D7%A4%D7%95%D7%A8%D7%AA">קביעת תור בוואטסאפ</a>
       </div>
     </div>
-    <div class="info reveal" style="--d:.1s"><span class="label">שעות</span>ימים א'–ה', <span class="ltr">19:00–22:00</span></div>
+    <div class="info reveal" style="--d:.1s"><span class="label">שעות</span><span class="hr"><span>א'–ד'</span><span class="ltr">09:00–16:00</span></span><span class="hr"><span>ה'</span><span>סגור</span></span><span class="hr"><span>ו'</span><span class="ltr">14:30–17:00</span></span><span class="hr"><span>שבת</span><span>סגור</span></span></div>
     <div class="info reveal" style="--d:.2s"><span class="label">כתובת</span>ז'בוטינסקי 50, גבעת שמואל<br>
       <a class="btn btn-line" href="https://waze.com/ul?q=%D7%96%27%D7%91%D7%95%D7%98%D7%99%D7%A0%D7%A1%D7%A7%D7%99%2050%20%D7%92%D7%91%D7%A2%D7%AA%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C&navigate=yes" rel="noopener" target="_blank">ניווט ב־Waze</a></div>
     <div class="info reveal" style="--d:.3s"><span class="label">טלפון</span><a class="ltr" href="tel:+972586799674">058-679-9674</a></div>
@@ -304,7 +327,7 @@ html.js .reveal.in{opacity:1;transform:none}
 </main>
 
 <footer>
-  <div class="wrap">© שמואל · מספרת גברים בגבעת שמואל</div>
+  <div class="wrap">© <span class="ltr">Shmuel Persiko hair design</span> · גבעת שמואל</div>
 </footer>
 
 <a class="fab" id="fab" href="https://wa.me/972586799674?text=%D7%94%D7%99%D7%99%20%D7%A9%D7%9E%D7%95%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%AA%D7%95%D7%A8%20%D7%9C%D7%AA%D7%A1%D7%A4%D7%95%D7%A8%D7%AA" aria-label="קביעת תור בוואטסאפ">
@@ -319,19 +342,26 @@ html.js .reveal.in{opacity:1;transform:none}
   /* open / closed status (Israel time) */
   (function () {
     try {
-      /* open Sunday–Thursday 19:00–22:00, Israel time */
+      /* hours from the Google Maps listing: Sun–Wed 09:00–16:00, Thu closed, Fri 14:30–17:00, Sat closed (Israel time) */
+      var sched = [[540, 960], [540, 960], [540, 960], [540, 960], null, [870, 1020], null];
+      var dayNames = ['א׳', 'ב׳', 'ג׳', 'ד׳', 'ה׳', 'ו׳', 'שבת'];
+      function fmt(m) { return ('0' + Math.floor(m / 60)).slice(-2) + ':' + ('0' + (m % 60)).slice(-2); }
       var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Jerusalem', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
       function part(t) { return parts.find(function (p) { return p.type === t; }).value; }
       var day = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[part('weekday')];
       var mins = (+part('hour')) * 60 + (+part('minute'));
       var el = document.getElementById('status'), tx = document.getElementById('statusText');
-      var openDay = day <= 4;
-      if (openDay && mins >= 19 * 60 && mins < 22 * 60) { tx.textContent = 'פתוח עכשיו · עד 22:00'; }
+      var today = sched[day];
+      if (today && mins >= today[0] && mins < today[1]) { tx.textContent = 'פתוח עכשיו · עד ' + fmt(today[1]); }
       else {
         el.classList.add('closed');
-        if (openDay && mins < 19 * 60) { tx.textContent = 'סגור כרגע · נפתח היום ב־19:00'; }
-        else if (day >= 0 && day <= 3) { tx.textContent = 'סגור כרגע · נפתח מחר ב־19:00'; }
-        else { tx.textContent = 'סגור כרגע · נפתח ביום א׳ ב־19:00'; }
+        if (today && mins < today[0]) { tx.textContent = 'סגור כרגע · נפתח היום ב־' + fmt(today[0]); }
+        else {
+          for (var d = 1; d <= 7; d++) {
+            var nd = (day + d) % 7;
+            if (sched[nd]) { tx.textContent = 'סגור כרגע · נפתח ' + (d === 1 ? 'מחר' : 'ביום ' + dayNames[nd]) + ' ב־' + fmt(sched[nd][0]); break; }
+          }
+        }
       }
     } catch (e) {}
   })();
