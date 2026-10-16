@@ -10,7 +10,7 @@
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="Shmuel Persiko Hair Design | מספרת גברים וילדים בגבעת שמואל">
 <meta property="og:description" content="הסטייל שלך. הדיוק שלנו. מספרת גברים וילדים בגבעת שמואל, 8 שנות ניסיון.">
-<meta property="og:image" content="https://shmuel-barber.com/assets/cut1.jpg">
+<meta property="og:image" content="https://shmuel-barber.com/assets/cut6.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' text-anchor='middle' fill='%23C5A47C'%3ESP%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,7 +98,7 @@ nav a.lnk:hover::after{transform:scaleX(1)}
 .hero-img{position:absolute;inset:0;z-index:-2}
 .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%}
 .hero .wrap{width:100%}
-.hero-img{inset:0 auto 0 0;width:auto;min-width:34%;aspect-ratio:502/836;-webkit-mask-image:linear-gradient(to right,#000 60%,transparent 100%);mask-image:linear-gradient(to right,#000 60%,transparent 100%)}
+.hero-img{inset:0 auto 0 0;width:auto;min-width:34%;aspect-ratio:825/1100;-webkit-mask-image:linear-gradient(to right,#000 60%,transparent 100%);mask-image:linear-gradient(to right,#000 60%,transparent 100%)}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:none}
 .hero::after{content:"";position:absolute;inset:auto 0 0 0;height:160px;z-index:-1;background:linear-gradient(0deg,var(--bg),transparent)}
 .hero .copy{max-width:600px}
@@ -141,7 +141,7 @@ nav a.lnk:hover::after{transform:scaleX(1)}
 
 /* gallery */
 #gallery{background:var(--bg2)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,340px));justify-content:center;gap:18px;margin-top:50px}
 .tile{position:relative;padding:0;border:0;background:var(--card);cursor:zoom-in;overflow:hidden;aspect-ratio:3/4.4;border-radius:2px}
 .tile img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
 .tile:hover img{transform:scale(1.05)}
@@ -231,7 +231,7 @@ footer{background:#0b0b0b;border-top:1px solid var(--line);padding:56px 0 100px}
   .card h3{font-size:17px}
   .price b{font-size:38px}
   .price span{font-size:18px}
-  .grid{grid-template-columns:1fr 1fr;gap:12px}
+  .grid{gap:12px}
   .hours-wrap th,.hours-wrap td{padding:14px 18px}
   .lb .nx{left:8px}.lb .pv{right:8px}
   .foot{grid-template-columns:1fr}
@@ -272,7 +272,7 @@ footer{background:#0b0b0b;border-top:1px solid var(--line);padding:56px 0 100px}
 
 <!-- HERO -->
 <section class="hero" id="top" style="padding-top:60px">
-  <div class="hero-img"><img src="assets/cut1.jpg" alt="תספורת פייד מדויקת בעבודת Shmuel Persiko Hair Design" width="502" height="836" fetchpriority="high"></div>
+  <div class="hero-img"><img src="assets/cut6.jpg" alt="תספורת פייד קצר עם זקן מסודר" width="825" height="1100" fetchpriority="high"></div>
   <div class="wrap">
     <div class="copy">
       <h1><span>SHMUEL PERSIKO</span><span>HAIR DESIGN</span></h1>
@@ -439,11 +439,6 @@ const SITE = {
     { day: "שבת",    closed: true }
   ],
   gallery: [
-    { id: "g1", src: "assets/cut1.jpg", alt: "תספורת פייד קצר עם מרקם", caption: "פייד", w: 502, h: 836 },
-    { id: "g2", src: "assets/cut2.jpg", alt: "תספורת פייד עם קו מסגרת וזקן", caption: "פייד + זקן", w: 488, h: 836 },
-    { id: "g3", src: "assets/cut3.jpg", alt: "תספורת עם סידור לאחור וזקן קצר", caption: "תספורת", w: 502, h: 836 },
-    { id: "g4", src: "assets/cut4.jpg", alt: "תספורת פייד קצר עם מרקם בפרופיל", caption: "פייד", w: 520, h: 1100, pos: "center 30%" },
-    { id: "g5", src: "assets/cut5.jpg", alt: "תספורת קצרה עם צבע בהיר ומרקם", caption: "עיצוב שיער", w: 825, h: 1100, pos: "center 15%" },
     { id: "g6", src: "assets/cut6.jpg", alt: "תספורת פייד קצר עם זקן מסודר", caption: "תספורת + זקן", w: 825, h: 1100, pos: "center 25%" }
   ]
 };
